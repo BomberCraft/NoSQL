@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" href="favicon.ico">
+
+    <title>Saisie d'un salarié</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="bootstrap/css/navbar-fixed-top.css" rel="stylesheet">
+
+    <!-- Import d'AngularJS -->
+    <script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Gestion des salariés</a>
+        </div>
+        <div id="navbar" class="navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="ajoutSalarie.html">Saisie</a></li>
+            <li class="active"><a href="#">Voir tous les salariés</a></li>
+          </ul>
+         </div>
+      </div>
+    </nav>
+    <!-- Fin Fixed navbar -->
+
+    <!-- contenu -->
+    <div class="container" ng-app="myApp" ng-controller="myCtrl">
+
+      <div class="jumbotron">
+        <p>Liste des salariés</p>
+
+        <table>
+          <tr ng-repeat="x in listSalaries">
+            <td>{{ x.id }}</td>
+            <td>{{ x.nom }}</td>
+            <td>{{ x.prenom }}</td>
+            <td> 
+              <a href="suppSalarie.html?id={{x.id}}">
+                <button type="button" class="btn btn-primary">
+                  <span class="glyphicon glyphicon-pencil"></span>
+                </button> 
+              </a>
+            </td>
+            <td>
+              <a href="suppSalarie.html?id={{x.id}}">
+                <button type="button" class="btn btn-danger"> 
+                  <span class="glyphicon glyphicon-trash"></span>
+                </button> 
+              </a>
+            </td>
+          </tr>
+        </table>
+
+      <br><br><br>
+      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- AngularJS - Scripts persos -->
+    <script src="module_Ang/ui-bootstrap-tpls-0.13.0.min.js"></script>
+    <script src="scripts/getAllApp.js"></script>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+afficher la liste des employés:
+    url: /collaborateurs
+    action:
+        GET
+        url: /collaborateurs
+
+Saisir un employé
+    url: /collaborateurs/new
+    action:
+        POST
+        url: /collaborateurs
+
+Afficher un employé
+    url: /collaborateurs/<id>
+    action
+        GET
+        url: collaborateurs/<id>
+        
+Modifier un employé
+    url: /collaborateurs/<id>/edit
+    action:
+        PUT
+        url: /collaborateurs/<id>
+        
+Suppression d'un employé
+    url: /collaborateurs/<id>/delete
+    action:
+        DELETE
+        url: /collaborateurs/<id>
+        
+Statistique
+    url: /statistique
+    action:
+        GET
+        url: /statistique
+        
+        
